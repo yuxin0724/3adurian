@@ -304,6 +304,7 @@
 			height: 100vh;
 			min-height: 600px;
 			overflow: hidden;
+			position: relative !important;
 		}
 		.hero-video-section video {
 			width: 100%;
@@ -314,14 +315,15 @@
 			left: 0;
 		}
 		.hero-text {
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-			text-align: center;
-			z-index: 2;
-			width: 100%;
-			padding: 20px;
+			position: absolute !important;
+			top: 50% !important;
+			left: 50% !important;
+			transform: translate(-50%, -50%) !important;
+			text-align: center !important;
+			z-index: 2 !important;
+			width: 100% !important;
+			padding: 20px !important;
+			margin: 0 !important;
 		}
 		.hero-text h1 {
 			font-size: 3.5rem;
@@ -498,12 +500,12 @@
 
 			<div class="content-wrap pt-0 pb-0">
 				<!-- Hero Video Section -->
-				<div class="position-relative hero-video-section">
+				<div class="position-relative hero-video-section" style="position: relative;">
 					<video autoplay loop muted playsinline>
 						<source src="videos/3adurian-1.mp4" type="video/mp4">
 						Your browser does not support the video tag.
 					</video>
-					<div class="hero-text">
+					<div class="hero-text" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; z-index: 2; width: 100%; padding: 20px;">
 						<p class="text-white mb-2" style="font-size: 1.2rem; font-weight: 400; letter-spacing: 2px;" data-translate="hero.tagline">Crafting premium tropical experiences for discerning palates</p>
 						<h1 class="text-white mb-3" data-translate="hero.title1">Fruits Tapas</h1>
 						<h2 class="text-white mb-4" data-translate="hero.title2">The Taste of Tropical</h2>

@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+
+<head>
+
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="" />
+	<link rel="icon" type="image/png" href="images/logo/3adurian-logo.png">
+	<link rel="shortcut icon" type="image/png" href="images/logo/3adurian-logo.png">
+
+	<!-- Stylesheets
+	============================================= -->
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"
+		type="text/css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" type="text/css" />
+	<link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+	<link rel="stylesheet" href="style.css" type="text/css" />
+	<link rel="stylesheet" href="css/dark.css" type="text/css" />
+
+	<link rel="stylesheet" href="css/font-icons.css" type="text/css" />
+	<link rel="stylesheet" href="css/animate.css" type="text/css" />
+	<link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
+
+	<link rel="stylesheet" href="css/custom.css" type="text/css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<!-- Specific Stylesheet -->
+	<link rel="stylesheet" href="css/colors.php?color=F4D03F" type="text/css" /> <!-- Theme Color -->
+	<link rel="stylesheet" href="css/fonts.css" type="text/css" /> <!-- Theme Font -->
+	<!-- / -->
+
+	<!-- Document Title
+	============================================= -->
+	<title>Home | 3Adurian - Premium Fusion Desserts</title>
+
+	<style>
+		:root {
+			--font-montserrat: 'Montserrat', sans-serif;
+		}
+		
+		body, html {
+			font-family: var(--font-montserrat), sans-serif !important;
+		}
+		
+		h1, h2, h3, h4, h5, h6 {
+			font-family: var(--font-montserrat), sans-serif !important;
+		}
+		
+		.menu-link, .button, .btn {
+			font-family: var(--font-montserrat), sans-serif !important;
+		}
+		
+		/* Floating Contact Bubbles */
+		.floating-contacts {
+			position: fixed;
+			bottom: 20px;
+			right: 20px;
+			z-index: 9999;
+			display: flex;
+			flex-direction: column;
+			gap: 15px;
+		}
+		
+		.contact-bubble {
+			width: 60px;
+			height: 60px;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			text-decoration: none;
+			box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+			transition: all 0.3s ease;
+			cursor: pointer;
+		}
+		
+		.contact-bubble:hover {
+			transform: translateY(-3px);
+			box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+			text-decoration: none;
+		}
+		
+		.whatsapp-bubble {
+			background: linear-gradient(135deg, #25D366, #128C7E);
+		}
+		
+		.wechat-bubble {
+			background: linear-gradient(135deg, #7BB32E, #5A9F1C);
+		}
+		
+		.contact-bubble i {
+			font-size: 28px;
+			color: white;
+			position: relative;
+			z-index: 2;
+		}
+		
+		.contact-bubble:hover i {
+			color: white;
+		}
+		
+		/* Smooth hover animation only */
+		.contact-bubble {
+			position: relative;
+			overflow: hidden;
+		}
+		
+		.contact-bubble::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			border-radius: 50%;
+			opacity: 0;
+			transition: opacity 0.3s ease;
+			z-index: 1;
+		}
+		
+		.whatsapp-bubble::before {
+			background: rgba(37, 211, 102, 0.2);
+		}
+		
+		.wechat-bubble::before {
+			background: rgba(123, 179, 46, 0.2);
+		}
+		
+		.contact-bubble:hover::before {
+			opacity: 1;
+		}
+		
+		/* Tooltip */
+		.contact-bubble .tooltip {
+			position: absolute;
+			right: 70px;
+			top: 50%;
+			transform: translateY(-50%);
+			background: rgba(0,0,0,0.8);
+			color: white;
+			padding: 8px 12px;
+			border-radius: 6px;
+			font-size: 14px;
+			white-space: nowrap;
+			opacity: 0;
+			visibility: hidden;
+			transition: all 0.3s ease;
+			font-family: var(--font-montserrat), sans-serif;
+		}
+		
+		.contact-bubble .tooltip::after {
+			content: '';
+			position: absolute;
+			left: 100%;
+			top: 50%;
+			transform: translateY(-50%);
+			border: 6px solid transparent;
+			border-left-color: rgba(0,0,0,0.8);
+		}
+		
+		.contact-bubble:hover .tooltip {
+			opacity: 1;
+			visibility: visible;
+		}
+		
+		@media (max-width: 768px) {
+			.floating-contacts {
+				bottom: 15px;
+				right: 15px;
+				gap: 12px;
+			}
+			
+			.contact-bubble {
+				width: 50px;
+				height: 50px;
+			}
+			
+			.contact-bubble i {
+				font-size: 24px;
+			}
+			
+			.contact-bubble .tooltip {
+				display: none;
+			}
+		}
+		
+		/* Language Switcher */
+		.language-switcher {
+			position: relative;
+			display: inline-block;
+		}
+		
+		.language-button {
+			background: none;
+			border: 2px solid #F4D03F;
+			color: #F4D03F;
+			padding: 8px 15px;
+			border-radius: 25px;
+			cursor: pointer;
+			font-family: var(--font-montserrat), sans-serif;
+			font-weight: 600;
+			font-size: 14px;
+			transition: all 0.3s ease;
+			display: flex;
+			align-items: center;
+			gap: 5px;
+		}
+		
+		.language-button:hover {
+			background: #F4D03F;
+			color: #333;
+		}
+		
+		.language-dropdown {
+			position: absolute;
+			top: 100%;
+			right: 0;
+			background: white;
+			border: 2px solid #F4D03F;
+			border-radius: 10px;
+			box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+			min-width: 150px;
+			opacity: 0;
+			visibility: hidden;
+			transform: translateY(-10px);
+			transition: all 0.3s ease;
+			z-index: 1000;
+		}
+		
+		.language-switcher.active .language-dropdown {
+			opacity: 1;
+			visibility: visible;
+			transform: translateY(0);
+		}
+		
+		.language-option {
+			padding: 12px 15px;
+			cursor: pointer;
+			transition: all 0.3s ease;
+			font-family: var(--font-montserrat), sans-serif;
+			font-weight: 500;
+			color: #333;
+			border-bottom: 1px solid #f0f0f0;
+			display: flex;
+			align-items: center;
+			gap: 8px;
+		}
+		
+		.language-option:last-child {
+			border-bottom: none;
+		}
+		
+		.language-option:hover {
+			background: #F4D03F;
+			color: #333;
+		}
+		
+		.language-option.active {
+			background: #F4D03F;
+			color: #333;
+			font-weight: 600;
+		}
+		
+		@media (max-width: 768px) {
+			.language-switcher {
+				margin-right: 10px;
+			}
+			
+			.language-button {
+				padding: 6px 12px;
+				font-size: 12px;
+			}
+		}
+		
+		#sectors .card-body {
+			min-height: 100px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		#sectors .card-body h4 {
+			color: #F4D03F;
+		}
+		a {
+			text-decoration: none !important;
+		}
+		.counter,
+		.counter span {
+			color: #F4D03F;
+		}
+		.icons-list li {
+			font-size: 16px !important;
+		}
+		.icon-size {
+			width: 30%;
+		}
+		@media(max-width: 767px) {
+			.icon-size {
+				width: 25%;
+			}
+		}
+		.hero-video-section {
+			height: 100vh;
+			min-height: 600px;
+			overflow: hidden;
+		}
+		.hero-video-section video {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		.hero-text {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			text-align: center;
+			z-index: 2;
+			width: 100%;
+			padding: 20px;
+		}
+		.hero-text h1 {
+			font-size: 3.5rem;
+			font-weight: 700;
+			text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+		}
+		.hero-text h2 {
+			font-size: 2.5rem;
+			font-weight: 600;
+			text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+		}
+		.hero-text p {
+			font-size: 1.5rem;
+			font-weight: 500;
+			text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+		}
+		@media(max-width: 768px) {
+			.hero-text h1 {
+				font-size: 2rem;
+			}
+			.hero-text h2 {
+				font-size: 1.5rem;
+			}
+			.hero-text p {
+				font-size: 1rem;
+			}
+			.hero-text p:first-child {
+				font-size: 0.9rem;
+			}
+			.hero-text p:last-of-type {
+				font-size: 1.2rem !important;
+			}
+			.hero-video-section {
+				min-height: 400px;
+			}
+		}
+		.process-number {
+			width: 80px;
+			height: 80px;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin: 0 auto 1rem;
+			font-weight: 700;
+			font-size: 1.5rem;
+		}
+		@media(max-width: 767px) {
+			.process-number {
+				width: 60px;
+				height: 60px;
+				font-size: 1.2rem;
+			}
+		}
+	</style>
+
+</head>
+
+<body class="stretched">
+
+	<!-- Document Wrapper
+	============================================= -->
+	<div id="wrapper" class="clearfix">
+
+		<!-- Header
+		============================================= -->
+		<header id="header" class="border-bottom-0" data-sticky-shrink="false">
+			<div id="header-wrap">
+				<div class="container">
+					<div class="header-row">
+
+						<!-- Logo
+						============================================= -->
+						<div id="logo">
+							<a href="index.html" class="standard-logo" data-sticky-logo="images/logo/3adurian-logo.png"><img
+									src="images/logo/3adurian-logo.png" alt="3Adurian Logo"></a>
+							<a href="index.html" class="retina-logo" data-sticky-logo="images/logo/3adurian-logo.png"><img
+									src="images/logo/3adurian-logo.png" alt="3Adurian Logo"></a>
+						</div><!-- #logo end -->
+
+						<div class="header-misc">
+							<div class="language-switcher">
+								<button class="language-button" onclick="toggleLanguageDropdown()">
+									<span id="current-language">🇬🇧 EN</span>
+									<i class="icon-angle-down"></i>
+								</button>
+								<div class="language-dropdown">
+									<div class="language-option active" onclick="changeLanguage('en')">
+										🇬🇧 English
+									</div>
+									<div class="language-option" onclick="changeLanguage('ms')">
+										🇲🇾 Bahasa Malaysia
+									</div>
+									<div class="language-option" onclick="changeLanguage('zh')">
+										🇨🇳 中文
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div id="primary-menu-trigger">
+							<svg class="svg-trigger" viewBox="0 0 100 100">
+								<path
+									d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20">
+								</path>
+								<path d="m 30,50 h 40"></path>
+								<path
+									d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20">
+								</path>
+							</svg>
+						</div>
+
+						<!-- Primary Navigation
+						============================================= -->
+						<nav class="primary-menu">
+
+							<ul class="menu-container">
+								<li class="menu-item current"><a class="menu-link" href="index.html">
+										<div data-translate="nav.home">Home</div>
+									</a></li>
+								<li class="menu-item"><a class="menu-link" href="about.html">
+										<div data-translate="nav.about">About Us</div>
+									</a></li>
+								<li class="menu-item"><a class="menu-link" href="products.html">
+										<div data-translate="nav.products">Premium Products</div>
+									</a></li>
+								<li class="menu-item"><a class="menu-link" href="contact.html">
+										<div data-translate="nav.contact">Contact Us</div>
+									</a></li>
+							</ul>
+
+						</nav><!-- #primary-menu end -->
+
+					</div>
+				</div>
+			</div>
+			<div class="header-wrap-clone"></div>
+		</header><!-- #header end -->
+
+		<!-- Content
+		============================================= -->
+		<section id="content">
+
+			<div class="content-wrap pt-0 pb-0">
+				<!-- Hero Video Section -->
+				<div class="position-relative hero-video-section">
+					<video autoplay loop muted playsinline>
+						<source src="videos/3adurian-1.mp4" type="video/mp4">
+						Your browser does not support the video tag.
+					</video>
+					<div class="hero-text">
+						<p class="text-white mb-2" style="font-size: 1.2rem; font-weight: 400; letter-spacing: 2px;" data-translate="hero.tagline">Crafting premium tropical experiences for discerning palates</p>
+						<h1 class="text-white mb-3" data-translate="hero.title1">Fruits Tapas</h1>
+						<h2 class="text-white mb-4" data-translate="hero.title2">The Taste of Tropical</h2>
+						<p class="text-white mb-4" style="font-size: 1.8rem; font-weight: 600;" data-translate="hero.subtitle">The Malaysia Premium Fusion Desserts</p>
+						<a href="https://wa.me/60122739293" target="_blank" class="button button-rounded button-xlarge" style="font-size: 1.1rem; padding: 12px 30px; background-color: #F4D03F; border-color: #F4D03F; color: #333; font-weight: 600;">
+							<i class="fab fa-whatsapp"></i> <span data-translate="hero.cta">Contact Us</span>
+						</a>
+					</div>
+					<div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)); z-index: 1;"></div>
+				</div>
+
+				<!-- Our Story Section -->
+				<div class="section py-5 bg-white animate-on-scroll">
+					<div class="container clearfix">
+						<div class="row align-items-center">
+							<div class="col-lg-6 mb-5 mb-lg-0 stagger-item">
+							<div class="heading-block border-bottom-0">
+								<h2 class="nott font-weight-semibold mb-4" style="color: #F4D03F;" data-translate="story.title">Our Story</h2>
+								<p class="lead mb-4" data-translate="story.intro">3Adurian is not just a dessert company; we are passionate artisans dedicated to transforming Malaysia's exotic tropical fruits into extraordinary fusion desserts that bridge traditional Southeast Asian flavors with modern culinary innovation.</p>
+								<p data-translate="story.description">Specializing in durian, pandan coconut, and cempedak creations, we craft each dessert with meticulous care, introducing the rich heritage and unmatched flavors of Malaysian tropical fruits to discerning palates worldwide.</p>
+							</div>
+							</div>
+							<div class="col-lg-6 stagger-item">
+								<video controls autoplay loop muted style="width: 100%; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+									<source src="videos/3adurian-2.mp4" type="video/mp4">
+									Your browser does not support the video tag.
+								</video>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Process Section -->
+				<div class="section py-5 animate-on-scroll" style="background-color: #f8f9fa;">
+					<div class="container clearfix">
+						<div class="row">
+							<div class="col-12 text-center mb-5 stagger-item">
+								<h2 class="nott font-weight-semibold" style="color: #F4D03F;" data-translate="process.title">Towards A Flavorful Journey</h2>
+								<p class="lead" data-translate="process.description">Our ultimate goal is to establish 3Adurian as a globally recognized Malaysian brand, showcasing the rich heritage and unmatched quality of Malaysian tropical fruit desserts worldwide.</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-lg-4 col-md-6 mb-5 stagger-item">
+								<div class="text-center process-step">
+									<div class="mb-4">
+										<div class="process-number" style="background: linear-gradient(135deg, #F4D03F, #F1C40F);">
+											<span style="color: #333;">01</span>
+										</div>
+									</div>
+									<h4 class="mb-3" style="color: #F4D03F;" data-translate="process.step1.title">Premium Sourcing</h4>
+									<p data-translate="process.step1.description">We carefully select the finest tropical fruits from trusted Malaysian growers, ensuring only the highest quality durian, pandan, and cempedak make it to our kitchen.</p>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-6 mb-5 stagger-item">
+								<div class="text-center process-step">
+									<div class="mb-4">
+										<div class="process-number" style="background: linear-gradient(135deg, #7CB342, #8BC34A);">
+											<span style="color: white;">02</span>
+										</div>
+									</div>
+									<h4 class="mb-3" style="color: #7CB342;" data-translate="process.step2.title">Artisan Crafting</h4>
+									<p data-translate="process.step2.description">Our skilled artisans blend traditional techniques with modern innovation, creating fusion desserts that preserve authentic flavors while appealing to contemporary tastes.</p>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-6 mb-5 stagger-item">
+								<div class="text-center process-step">
+									<div class="mb-4">
+										<div class="process-number" style="background: linear-gradient(135deg, #F4D03F, #F1C40F);">
+											<span style="color: #333;">03</span>
+										</div>
+									</div>
+									<h4 class="mb-3" style="color: #F4D03F;" data-translate="process.step3.title">Perfect Delivery</h4>
+									<p data-translate="process.step3.description">Each dessert is crafted fresh and delivered with care, ensuring that every bite captures the authentic taste of tropical Malaysia in premium fusion form.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Explore Our Creations Section -->
+				<div class="section py-5" style="background: linear-gradient(135deg, #7CB342 0%, #8BC34A 100%);">
+					<div class="container clearfix text-center">
+						<h2 class="nott font-weight-semibold mb-4 text-white" data-translate="cta.title">Explore Our Creations</h2>
+						<p class="text-white mb-4" style="font-size: 1.1rem;" data-translate="cta.description">Ready to experience the finest tropical fusion desserts Malaysia has to offer?</p>
+						<a href="https://wa.me/60122739293" target="_blank" class="button button-rounded button-xlarge" style="font-size: 1.2rem; padding: 15px 40px; background-color: #F4D03F; border-color: #F4D03F; color: #333; font-weight: 600;">
+							<i class="fab fa-whatsapp"></i> <span data-translate="cta.button">Contact Us on WhatsApp</span>
+						</a>
+					</div>
+				</div>
+			</div>
+	</div>
+	</section><!-- #content end -->
+
+	<!-- Footer
+		============================================= -->
+	<footer id="footer" class="border-0">
+
+		<!-- Copyrights
+			============================================= -->
+		<div id="copyrights" class="bg-transparent dark pt-0">
+
+			<div class="line mt-0"></div>
+
+			<div class="container clearfix">
+
+				<div class="row justify-content-center">
+					<div class="col-12 col-lg-8 text-center">
+						<p class="mb-2 text-white" data-translate="footer.rights">© 2025 3Adurian. All Rights Reserved.
+						</p>
+						<p class="mb-2 text-white"><span data-translate="footer.website">Website</span>: <a href="https://3adurian.com" target="_blank" style="color: yellow;">3adurian.com</a> | <span data-translate="footer.email">Email</span>: <a href="mailto:3adurian2025@gmail.com" style="color: yellow;">3adurian2025@gmail.com</a></p>
+					</div>
+				</div>
+
+			</div>
+
+		</div><!-- #copyrights end -->
+
+	</footer><!-- #footer end -->
+
+	</div><!-- #wrapper end -->
+
+	<!-- Floating Contact Bubbles -->
+	<div class="floating-contacts">
+		<a href="https://wa.me/60122739293" target="_blank" class="contact-bubble whatsapp-bubble">
+			<i class="fab fa-whatsapp"></i>
+			<div class="tooltip" data-translate="contact.whatsapp">Chat on WhatsApp</div>
+		</a>
+		<a href="weixin://dl/chat" class="contact-bubble wechat-bubble" onclick="copyWeChatID()">
+			<i class="fab fa-weixin"></i>
+			<div class="tooltip" data-translate="contact.wechat">WeChat: 3adurian2025</div>
+		</a>
+	</div>
+
+	<!-- Go To Top
+	============================================= -->
+	<div id="gotoTop" class="icon-angle-up"></div>
+
+	<!-- JavaScripts
+	============================================= -->
+	<script src="js/jquery.js"></script>
+	<script src="js/plugins.min.js"></script>
+
+	<!-- Footer Scripts
+	============================================= -->
+	<script src="js/functions.js"></script>
+	<script src="js/language.js"></script>
+	<script src="js/interactive.js"></script>
+
+</body>
+
+</html>

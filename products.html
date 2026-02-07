@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="" />
+	<link rel="icon" type="image/png" href="images/logo/3adurian-logo.png">
+	<link rel="shortcut icon" type="image/png" href="images/logo/3adurian-logo.png">
+
+	<!-- Stylesheets
+	============================================= -->
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" type="text/css" />
+	<link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+	<link rel="stylesheet" href="style.css" type="text/css" />
+	<link rel="stylesheet" href="css/dark.css" type="text/css" />
+
+	<link rel="stylesheet" href="css/font-icons.css" type="text/css" />
+	<link rel="stylesheet" href="css/animate.css" type="text/css" />
+	<link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
+
+	<link rel="stylesheet" href="css/custom.css" type="text/css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<!-- Specific Stylesheet -->
+	<link rel="stylesheet" href="css/colors.php?color=F4D03F" type="text/css" /> <!-- Theme Color -->
+	<link rel="stylesheet" href="css/fonts.css" type="text/css" /> <!-- Theme Font -->
+	<!-- / -->
+
+	<!-- Document Title
+	============================================= -->
+	<title>Premium Products | 3Adurian - Premium Fusion Desserts</title>
+
+	<style>
+		:root {
+			--font-montserrat: 'Montserrat', sans-serif;
+		}
+		
+		body, html {
+			font-family: var(--font-montserrat), sans-serif !important;
+		}
+		
+		h1, h2, h3, h4, h5, h6 {
+			font-family: var(--font-montserrat), sans-serif !important;
+		}
+		
+		.menu-link, .button, .btn {
+			font-family: var(--font-montserrat), sans-serif !important;
+		}
+		
+		/* Floating Contact Bubbles */
+		.floating-contacts {
+			position: fixed;
+			bottom: 20px;
+			right: 20px;
+			z-index: 9999;
+			display: flex;
+			flex-direction: column;
+			gap: 15px;
+		}
+		
+		.contact-bubble {
+			width: 60px;
+			height: 60px;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			text-decoration: none;
+			box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+			transition: all 0.3s ease;
+			cursor: pointer;
+		}
+		
+		.contact-bubble:hover {
+			transform: translateY(-3px);
+			box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+			text-decoration: none;
+		}
+		
+		.whatsapp-bubble {
+			background: linear-gradient(135deg, #25D366, #128C7E);
+		}
+		
+		.wechat-bubble {
+			background: linear-gradient(135deg, #7BB32E, #5A9F1C);
+		}
+		
+		.contact-bubble i {
+			font-size: 28px;
+			color: white;
+			position: relative;
+			z-index: 2;
+		}
+		
+		.contact-bubble:hover i {
+			color: white;
+		}
+		
+		/* Smooth hover animation only */
+		.contact-bubble {
+			position: relative;
+			overflow: hidden;
+		}
+		
+		.contact-bubble::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			border-radius: 50%;
+			opacity: 0;
+			transition: opacity 0.3s ease;
+			z-index: 1;
+		}
+		
+		.whatsapp-bubble::before {
+			background: rgba(37, 211, 102, 0.2);
+		}
+		
+		.wechat-bubble::before {
+			background: rgba(123, 179, 46, 0.2);
+		}
+		
+		.contact-bubble:hover::before {
+			opacity: 1;
+		}
+		
+		/* Tooltip */
+		.contact-bubble .tooltip {
+			position: absolute;
+			right: 70px;
+			top: 50%;
+			transform: translateY(-50%);
+			background: rgba(0,0,0,0.8);
+			color: white;
+			padding: 8px 12px;
+			border-radius: 6px;
+			font-size: 14px;
+			white-space: nowrap;
+			opacity: 0;
+			visibility: hidden;
+			transition: all 0.3s ease;
+			font-family: var(--font-montserrat), sans-serif;
+		}
+		
+		.contact-bubble .tooltip::after {
+			content: '';
+			position: absolute;
+			left: 100%;
+			top: 50%;
+			transform: translateY(-50%);
+			border: 6px solid transparent;
+			border-left-color: rgba(0,0,0,0.8);
+		}
+		
+		.contact-bubble:hover .tooltip {
+			opacity: 1;
+			visibility: visible;
+		}
+		
+		@media (max-width: 768px) {
+			.floating-contacts {
+				bottom: 15px;
+				right: 15px;
+				gap: 12px;
+			}
+			
+			.contact-bubble {
+				width: 50px;
+				height: 50px;
+			}
+			
+			.contact-bubble i {
+				font-size: 24px;
+			}
+			
+			.contact-bubble .tooltip {
+				display: none;
+			}
+		}
+		
+		/* Language Switcher */
+		.language-switcher {
+			position: relative;
+			display: inline-block;
+		}
+		
+		.language-button {
+			background: none;
+			border: 2px solid #F4D03F;
+			color: #F4D03F;
+			padding: 8px 15px;
+			border-radius: 25px;
+			cursor: pointer;
+			font-family: var(--font-montserrat), sans-serif;
+			font-weight: 600;
+			font-size: 14px;
+			transition: all 0.3s ease;
+			display: flex;
+			align-items: center;
+			gap: 5px;
+		}
+		
+		.language-button:hover {
+			background: #F4D03F;
+			color: #333;
+		}
+		
+		.language-dropdown {
+			position: absolute;
+			top: 100%;
+			right: 0;
+			background: white;
+			border: 2px solid #F4D03F;
+			border-radius: 10px;
+			box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+			min-width: 150px;
+			opacity: 0;
+			visibility: hidden;
+			transform: translateY(-10px);
+			transition: all 0.3s ease;
+			z-index: 1000;
+		}
+		
+		.language-switcher.active .language-dropdown {
+			opacity: 1;
+			visibility: visible;
+			transform: translateY(0);
+		}
+		
+		.language-option {
+			padding: 12px 15px;
+			cursor: pointer;
+			transition: all 0.3s ease;
+			font-family: var(--font-montserrat), sans-serif;
+			font-weight: 500;
+			color: #333;
+			border-bottom: 1px solid #f0f0f0;
+			display: flex;
+			align-items: center;
+			gap: 8px;
+		}
+		
+		.language-option:last-child {
+			border-bottom: none;
+		}
+		
+		.language-option:hover {
+			background: #F4D03F;
+			color: #333;
+		}
+		
+		.language-option.active {
+			background: #F4D03F;
+			color: #333;
+			font-weight: 600;
+		}
+		
+		@media (max-width: 768px) {
+			.language-switcher {
+				margin-right: 10px;
+			}
+			
+			.language-button {
+				padding: 6px 12px;
+				font-size: 12px;
+			}
+		}
+		
+		/* Product Image Styles */
+		.card-img-top {
+			transition: transform 0.3s ease;
+		}
+		
+		.card:hover .card-img-top {
+			transform: scale(1.05);
+		}
+		
+		.product-thumb {
+			transition: transform 0.3s ease, box-shadow 0.3s ease;
+		}
+		
+		.product-thumb:hover {
+			transform: scale(1.05);
+			box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+		}
+		
+		.product-gallery {
+			margin-top: 15px;
+		}
+		
+		/* Image Lightbox */
+		.image-lightbox {
+			display: none;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(0,0,0,0.9);
+			z-index: 10000;
+			align-items: center;
+			justify-content: center;
+			cursor: pointer;
+		}
+		
+		.image-lightbox.active {
+			display: flex;
+		}
+		
+		.image-lightbox img {
+			max-width: 90%;
+			max-height: 90%;
+			border-radius: 10px;
+			box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+		}
+		
+		.image-lightbox-close {
+			position: absolute;
+			top: 20px;
+			right: 30px;
+			color: white;
+			font-size: 40px;
+			font-weight: bold;
+			cursor: pointer;
+			z-index: 10001;
+		}
+		
+		.image-lightbox-close:hover {
+			color: #F4D03F;
+		}
+	</style>
+
+</head>
+
+<body class="stretched">
+
+	<!-- Document Wrapper
+	============================================= -->
+	<div id="wrapper" class="clearfix">
+
+		<!-- Header
+		============================================= -->
+		<header id="header" class="border-bottom-0" data-sticky-shrink="false">
+			<div id="header-wrap">
+				<div class="container">
+					<div class="header-row">
+
+						<!-- Logo
+						============================================= -->
+						<div id="logo">
+							<a href="index.html" class="standard-logo" data-sticky-logo="images/logo/3adurian-logo.png"><img src="images/logo/3adurian-logo.png" alt="3Adurian Logo"></a>
+							<a href="index.html" class="retina-logo" data-sticky-logo="images/logo/3adurian-logo.png"><img src="images/logo/3adurian-logo.png" alt="3Adurian Logo"></a>
+						</div><!-- #logo end -->
+
+						<div class="header-misc">
+							<div class="language-switcher">
+								<button class="language-button" onclick="toggleLanguageDropdown()">
+									<span id="current-language">🇬🇧 EN</span>
+									<i class="icon-angle-down"></i>
+								</button>
+								<div class="language-dropdown">
+									<div class="language-option active" onclick="changeLanguage('en')">
+										🇬🇧 English
+									</div>
+									<div class="language-option" onclick="changeLanguage('ms')">
+										🇲🇾 Bahasa Malaysia
+									</div>
+									<div class="language-option" onclick="changeLanguage('zh')">
+										🇨🇳 中文
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div id="primary-menu-trigger">
+							<svg class="svg-trigger" viewBox="0 0 100 100"><path d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20"></path><path d="m 30,50 h 40"></path><path d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"></path></svg>
+						</div>
+
+						<!-- Primary Navigation
+						============================================= -->
+						<nav class="primary-menu">
+
+							<ul class="menu-container">
+								<li class="menu-item"><a class="menu-link" href="index.html"><div data-translate="nav.home">Home</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="about.html"><div data-translate="nav.about">About Us</div></a></li>
+								<li class="menu-item current"><a class="menu-link" href="products.html"><div data-translate="nav.products">Premium Products</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="contact.html"><div data-translate="nav.contact">Contact Us</div></a></li>
+							</ul>
+
+						</nav><!-- #primary-menu end -->
+
+					</div>
+				</div>
+			</div>
+			<div class="header-wrap-clone"></div>
+		</header><!-- #header end -->
+
+		<!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap pt-0 pb-0">
+
+				<section id="page-title" class="page-title-center d-flex align-items-center vh-50" style="background-image: linear-gradient(#05309750 , #05319750), url('images/products-banner.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center center;">
+					<div class="container clearfix">
+						<h1 class="display-4 ls0 nott text-white" data-translate="products.title">Premium Products</h1>
+					</div>
+				</section>
+
+				<div class="clear"></div>
+
+				<div id="products" class="section mt-0 pt-md-5 pt-0 mb-0">
+					<div class="container clearfix">
+						<!-- Video/Photo Section -->
+						<div class="row mb-5">
+							<div class="col-md-6 mb-4">
+								<video controls autoplay loop muted style="width: 100%; height: auto; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.15);">
+									<source src="videos/3adurian-1.mp4" type="video/mp4">
+									Your browser does not support the video tag.
+								</video>
+							</div>
+							<div class="col-md-6 mb-4">
+								<video controls autoplay loop muted style="width: 100%; height: auto; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.15);">
+									<source src="videos/3adurian-2.mp4" type="video/mp4">
+									Your browser does not support the video tag.
+								</video>
+							</div>
+						</div>
+
+						<!-- Short Description -->
+						<div class="row mb-5">
+							<div class="col-12 text-center">
+								<p class="lead" style="font-size: 1.2rem; color: #333;" data-translate="products.video.description">Experience the finest tropical fruit fusion desserts, crafted with premium ingredients and traditional Malaysian flavors.</p>
+							</div>
+						</div>
+
+						<!-- Features -->
+						<div class="row mb-5">
+							<div class="col-md-3 col-sm-6 mb-4 stagger-item">
+								<div class="text-center feature-item">
+									<i class="icon-check-circle" style="font-size: 3rem; color: #7CB342;"></i>
+									<h4 class="mt-3" data-translate="products.features.title1">Without Preservative</h4>
+								</div>
+							</div>
+							<div class="col-md-3 col-sm-6 mb-4 stagger-item">
+								<div class="text-center feature-item">
+									<i class="icon-check-circle" style="font-size: 3rem; color: #7CB342;"></i>
+									<h4 class="mt-3" data-translate="products.features.title2">No Artificial Colouring</h4>
+								</div>
+							</div>
+							<div class="col-md-3 col-sm-6 mb-4 stagger-item">
+								<div class="text-center feature-item">
+									<i class="icon-check-circle" style="font-size: 3rem; color: #7CB342;"></i>
+									<h4 class="mt-3" data-translate="products.features.title3">Lactose Free</h4>
+								</div>
+							</div>
+							<div class="col-md-3 col-sm-6 mb-4 stagger-item">
+								<div class="text-center feature-item">
+									<i class="icon-check-circle" style="font-size: 3rem; color: #7CB342;"></i>
+									<h4 class="mt-3" data-translate="products.features.title4">Gluten Free</h4>
+								</div>
+							</div>
+						</div>
+
+						<!-- Taste Profile Section -->
+						<div class="row taste-profile-section">
+							<div class="col-12 mb-5">
+								<h2 class="text-center mb-5" style="color: #F4D03F;" data-translate="products.taste.title">Taste Profile</h2>
+							</div>
+
+							<!-- Durian Desserts -->
+							<div class="col-lg-4 col-md-6 mb-5">
+								<div class="card shadow-sm border-light h-100" style="transform: none !important;">
+									<img src="images/products/3adurian-durian-cream-cheese-cake.jpeg" alt="Durian Desserts" class="card-img-top" style="height: 300px; object-fit: cover; cursor: pointer; transform: none !important;" onclick="openLightbox(this.src, this.alt)">
+									<div class="card-body text-center">
+										<h3 class="mb-4" style="color: #F4D03F;" data-translate="products.durian.title">i. Durian Desserts</h3>
+										<div class="product-gallery mb-3">
+											<div class="row">
+												<div class="col-6 mb-2">
+													<img src="images/products/3adurian-durian-cream-cheese-cake.jpeg" alt="Durian Cream Cheese" class="product-thumb" style="width: 100%; border-radius: 8px; cursor: pointer;" onclick="openLightbox(this.src, this.alt)">
+													<p class="mb-0 mt-1" style="font-size: 0.85rem;" data-translate="products.durian.item1">Durian Cream Cheese</p>
+												</div>
+												<div class="col-6 mb-2">
+													<img src="images/products/3adurian-durian-tiramisu.jpeg" alt="Durian Tiramisu" class="product-thumb" style="width: 100%; border-radius: 8px; cursor: pointer;" onclick="openLightbox(this.src, this.alt)">
+													<p class="mb-0 mt-1" style="font-size: 0.85rem;" data-translate="products.durian.item2">Durian Tiramisu</p>
+												</div>
+												<div class="col-6 mb-2">
+													<img src="images/products/3adurian-musang-king-durian-cream-cheese.jpeg" alt="Musang King Durian Cream Cheese" class="product-thumb" style="width: 100%; border-radius: 8px; cursor: pointer;" onclick="openLightbox(this.src, this.alt)">
+													<p class="mb-0 mt-1" style="font-size: 0.85rem;" data-translate="products.durian.item3">Musang King Cream Cheese</p>
+												</div>
+												<div class="col-6 mb-2">
+													<img src="images/products/3adurian-musang-king-durian-tiramisu.jpeg" alt="Musang King Durian Tiramisu" class="product-thumb" style="width: 100%; border-radius: 8px; cursor: pointer;" onclick="openLightbox(this.src, this.alt)">
+													<p class="mb-0 mt-1" style="font-size: 0.85rem;" data-translate="products.durian.item4">Musang King Tiramisu</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Pandan Coconuts Desserts -->
+							<div class="col-lg-4 col-md-6 mb-5">
+								<div class="card shadow-sm border-light h-100" style="transform: none !important;">
+									<img src="images/products/3adurian-pandan-coconut-cream-cheese-cake.jpeg" alt="Pandan Coconut Desserts" class="card-img-top" style="height: 300px; object-fit: cover; cursor: pointer; transform: none !important;" onclick="openLightbox(this.src, this.alt)">
+									<div class="card-body text-center">
+										<h3 class="mb-4" style="color: #7CB342;" data-translate="products.pandan.title">ii. Pandan Coconuts Desserts</h3>
+										<div class="product-gallery mb-3">
+											<div class="row">
+												<div class="col-6 mb-2">
+													<img src="images/products/3adurian-pandan-coconut-cream-cheese-cake.jpeg" alt="Pandan Coconut Cream Cheese" class="product-thumb" style="width: 100%; border-radius: 8px; cursor: pointer;" onclick="openLightbox(this.src, this.alt)">
+													<p class="mb-0 mt-1" style="font-size: 0.85rem;" data-translate="products.pandan.item1">Pandan Coconut Cream Cheese</p>
+												</div>
+												<div class="col-6 mb-2">
+													<img src="images/products/3adurian-pandan-coconut-tiramisu.jpeg" alt="Pandan Coconut Tiramisu" class="product-thumb" style="width: 100%; border-radius: 8px; cursor: pointer;" onclick="openLightbox(this.src, this.alt)">
+													<p class="mb-0 mt-1" style="font-size: 0.85rem;" data-translate="products.pandan.item2">Pandan Coconut Tiramisu</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Cempedak Desserts -->
+							<div class="col-lg-4 col-md-6 mb-5">
+								<div class="card shadow-sm border-light h-100" style="transform: none !important;">
+									<img src="images/products/3adurian-cempedak-cream-cheese-cake.jpeg" alt="Cempedak Desserts" class="card-img-top" style="height: 300px; object-fit: cover; cursor: pointer; transform: none !important;" onclick="openLightbox(this.src, this.alt)">
+									<div class="card-body text-center">
+										<h3 class="mb-4" style="color: #F4D03F;" data-translate="products.cempedak.title">iii. Cempedak Desserts</h3>
+										<div class="product-gallery mb-3">
+											<div class="row">
+												<div class="col-6 mb-2">
+													<img src="images/products/3adurian-cempedak-cream-cheese-cake.jpeg" alt="Cempedak Cream Cheese" class="product-thumb" style="width: 100%; border-radius: 8px; cursor: pointer;" onclick="openLightbox(this.src, this.alt)">
+													<p class="mb-0 mt-1" style="font-size: 0.85rem;" data-translate="products.cempedak.item1">Cempedak Cream Cheese</p>
+												</div>
+												<div class="col-6 mb-2">
+													<img src="images/products/3adurian-cempedak-tiramisu.jpeg" alt="Cempedak Tiramisu" class="product-thumb" style="width: 100%; border-radius: 8px; cursor: pointer;" onclick="openLightbox(this.src, this.alt)">
+													<p class="mb-0 mt-1" style="font-size: 0.85rem;" data-translate="products.cempedak.item2">Cempedak Tiramisu</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section><!-- #content end -->
+
+		<!-- Footer
+		============================================= -->
+		<footer id="footer" class="border-0">
+
+			<!-- Copyrights
+			============================================= -->
+			<div id="copyrights" class="bg-transparent dark pt-0">
+
+				<div class="line mt-0"></div>
+
+				<div class="container clearfix">
+
+					<div class="row justify-content-center">
+						<div class="col-12 col-lg-8 text-center">
+							<p class="mb-2 text-white" data-translate="footer.rights">© 2025 3Adurian. All Rights Reserved.</p>
+							<p class="mb-2 text-white"><span data-translate="footer.website">Website</span>: <a href="https://3adurian.com" target="_blank" style="color: yellow;">3adurian.com</a> | <span data-translate="footer.email">Email</span>: <a href="mailto:3adurian2025@gmail.com" style="color: yellow;">3adurian2025@gmail.com</a></p>
+						</div>
+					</div>
+
+				</div>
+
+			</div><!-- #copyrights end -->
+
+		</footer><!-- #footer end -->
+
+	</div><!-- #wrapper end -->
+
+	<!-- Floating Contact Bubbles -->
+	<div class="floating-contacts">
+		<a href="https://wa.me/60122739293" target="_blank" class="contact-bubble whatsapp-bubble">
+			<i class="fab fa-whatsapp"></i>
+			<div class="tooltip" data-translate="contact.whatsapp">Chat on WhatsApp</div>
+		</a>
+		<a href="weixin://dl/chat" class="contact-bubble wechat-bubble" onclick="copyWeChatID()">
+			<i class="fab fa-weixin"></i>
+			<div class="tooltip" data-translate="contact.wechat">WeChat: 3adurian2025</div>
+		</a>
+	</div>
+
+	<!-- Go To Top
+	============================================= -->
+	<div id="gotoTop" class="icon-angle-up"></div>
+
+	<!-- JavaScripts
+	============================================= -->
+	<script src="js/jquery.js"></script>
+	<script src="js/plugins.min.js"></script>
+
+	<!-- Image Lightbox -->
+	<div class="image-lightbox" id="imageLightbox" onclick="closeLightbox()">
+		<span class="image-lightbox-close" onclick="event.stopPropagation(); closeLightbox()">&times;</span>
+		<img id="lightboxImage" src="" alt="">
+	</div>
+
+	<!-- Footer Scripts
+	============================================= -->
+	<script src="js/functions.js"></script>
+	<script src="js/language.js"></script>
+	<script src="js/interactive.js"></script>
+	
+	<script>
+		function openLightbox(imageSrc, imageAlt) {
+			const lightbox = document.getElementById('imageLightbox');
+			const lightboxImage = document.getElementById('lightboxImage');
+			lightboxImage.src = imageSrc;
+			lightboxImage.alt = imageAlt;
+			lightbox.classList.add('active');
+			document.body.style.overflow = 'hidden';
+		}
+		
+		function closeLightbox() {
+			const lightbox = document.getElementById('imageLightbox');
+			lightbox.classList.remove('active');
+			document.body.style.overflow = '';
+		}
+		
+		// Close lightbox on ESC key
+		document.addEventListener('keydown', function(e) {
+			if (e.key === 'Escape') {
+				closeLightbox();
+			}
+		});
+	</script>
+
+</body>
+</html>

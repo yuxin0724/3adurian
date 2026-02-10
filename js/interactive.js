@@ -49,7 +49,33 @@
         initButtonRipples();
         initImageZoom();
         initNavbarScroll();
+		initHeroSequence();
     }
+
+	// Hero Text Sequential Reveal
+	function initHeroSequence() {
+		const heroLines = document.querySelectorAll('.hero-copy-wrapper .hero-line');
+		if (!heroLines.length) return;
+
+		// Set initial inline styles to ensure we control opacity/transform
+		heroLines.forEach(line => {
+			line.style.opacity = '0';
+			line.style.transform = 'translateY(20px)';
+			line.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+		});
+
+		// Show each line with at least 1.5s gap
+		const baseDelay = 1000; // first line after 1s
+		const gap = 500;       // 1.5s between lines
+
+		heroLines.forEach((line, index) => {
+			const delay = baseDelay + index * gap;
+			setTimeout(() => {
+				line.style.opacity = '1';
+				line.style.transform = 'translateY(0)';
+			}, delay);
+		});
+	}
 
     // Product Cards Interactive Effects
     function initProductCards() {

@@ -300,64 +300,86 @@
 				width: 25%;
 			}
 		}
-		.hero-video-section {
-			height: 100vh;
-			min-height: 600px;
-			overflow: hidden;
-			position: relative !important;
+
+		/* New Hero Section (Image + Text) */
+		.hero-main-section {
+			background: linear-gradient(135deg, #f9fbe7 0%, #fffde7 100%);
+			padding: 80px 0;
 		}
-		.hero-video-section video {
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
-			position: absolute;
-			top: 0;
-			left: 0;
+		.hero-main-section .container {
+			max-width: 1140px;
 		}
-		.hero-text {
-			position: absolute !important;
-			top: 50% !important;
-			left: 50% !important;
-			transform: translate(-50%, -50%) !important;
-			text-align: center !important;
-			z-index: 2 !important;
-			width: 100% !important;
-			padding: 20px !important;
-			margin: 0 !important;
+		.hero-image-wrapper {
+			text-align: center;
 		}
-		.hero-text h1 {
-			font-size: 3.5rem;
+		.hero-image {
+			max-width: 100%;
+			height: auto;
+			filter: drop-shadow(0 15px 35px rgba(0, 0, 0, 0.25));
+			opacity: 0;
+			transform: translateX(40px);
+			animation: heroImageIn 0.8s ease forwards 0.1s;
+		}
+		.hero-copy-wrapper {
+			color: #1b5e20;
+		}
+		.hero-copy-wrapper .hero-line {
+			opacity: 0;
+			transform: translateY(20px);
+			transition: opacity 0.8s ease, transform 0.8s ease;
+		}
+
+		.hero-copy-wrapper h1 {
+			font-size: 3rem;
+			font-weight: 800;
+		}
+		.hero-copy-wrapper h2 {
+			font-size: 2.2rem;
 			font-weight: 700;
-			text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 		}
-		.hero-text h2 {
-			font-size: 2.5rem;
-			font-weight: 600;
-			text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+		.hero-copy-wrapper p {
+			font-size: 1.2rem;
 		}
-		.hero-text p {
-			font-size: 1.5rem;
-			font-weight: 500;
-			text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+
+		/* Themed hero colors */
+		.hero-line-1 {
+			color: #7CB342; /* bright green accent */
 		}
-		@media(max-width: 768px) {
-			.hero-text h1 {
-				font-size: 2rem;
+		.hero-line-2 {
+			color: #1B5E20; /* deep durian green */
+		}
+		.hero-line-3 {
+			color: #F4D03F; /* durian yellow */
+		}
+		.hero-line-4 {
+			color: #F1C40F; /* warm golden yellow */
+		}
+		.hero-line-5 {
+			color: #5D4037; /* rich cocoa/brown for contrast */
+		}
+
+		@keyframes heroImageIn {
+			0% { opacity: 0; transform: translateX(40px); }
+			100% { opacity: 1; transform: translateX(0); }
+		}
+
+		@media (max-width: 991.98px) {
+			.hero-main-section {
+				padding: 60px 0 40px;
 			}
-			.hero-text h2 {
-				font-size: 1.5rem;
+			.hero-copy-wrapper {
+				margin-top: 30px;
+				text-align: center;
 			}
-			.hero-text p {
-				font-size: 1rem;
-			}
-			.hero-text p:first-child {
-				font-size: 0.9rem;
-			}
-			.hero-text p:last-of-type {
-				font-size: 1.2rem !important;
-			}
-			.hero-video-section {
-				min-height: 400px;
+		}
+
+		@media (prefers-reduced-motion: reduce) {
+			.hero-image,
+			.hero-copy-wrapper .hero-line {
+				animation: none !important;
+				opacity: 1 !important;
+				transform: none !important;
+				transition: none !important;
 			}
 		}
 		.process-number {
@@ -475,11 +497,11 @@
 								<li class="menu-item current"><a class="menu-link" href="index.html">
 										<div data-translate="nav.home">Home</div>
 									</a></li>
+								<li class="menu-item"><a class="menu-link" href="products.html">
+										<div data-translate="nav.products">Products</div>
+									</a></li>
 								<li class="menu-item"><a class="menu-link" href="about.html">
 										<div data-translate="nav.about">About Us</div>
-									</a></li>
-								<li class="menu-item"><a class="menu-link" href="products.html">
-										<div data-translate="nav.products">Premium Products</div>
 									</a></li>
 								<li class="menu-item"><a class="menu-link" href="contact.html">
 										<div data-translate="nav.contact">Contact Us</div>
@@ -499,22 +521,22 @@
 		<section id="content">
 
 			<div class="content-wrap pt-0 pb-0">
-				<!-- Hero Video Section -->
-				<div class="position-relative hero-video-section" style="position: relative;">
-					<video autoplay loop muted playsinline>
-						<source src="videos/3adurian-1.mp4" type="video/mp4">
-						Your browser does not support the video tag.
-					</video>
-					<div class="hero-text" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; z-index: 2; width: 100%; padding: 20px;">
-						<p class="text-white mb-2" style="font-size: 1.2rem; font-weight: 400; letter-spacing: 2px;" data-translate="hero.tagline">Crafting premium tropical experiences for discerning palates</p>
-						<h1 class="text-white mb-3" data-translate="hero.title1">Fruits Tapas</h1>
-						<h2 class="text-white mb-4" data-translate="hero.title2">The Taste of Tropical</h2>
-						<p class="text-white mb-4" style="font-size: 1.8rem; font-weight: 600;" data-translate="hero.subtitle">The Malaysia Premium Fusion Desserts</p>
-						<a href="https://wa.me/60122739293" target="_blank" class="button button-rounded button-xlarge" style="font-size: 1.1rem; padding: 12px 30px; background-color: #F4D03F; border-color: #F4D03F; color: #333; font-weight: 600;">
-							<i class="fab fa-whatsapp"></i> <span data-translate="hero.cta">Contact Us</span>
-						</a>
+				<!-- Hero Section - Image + Text -->
+				<div class="hero-main-section">
+					<div class="container clearfix">
+						<div class="row align-items-center">
+							<div class="col-lg-6 hero-image-wrapper mb-4 mb-lg-0">
+								<img src="images/products/3adurian-musang-king-durian-tiramisu.jpeg" alt="Musang King Tiramisu" class="hero-image">
+							</div>
+							<div class="col-lg-6 hero-copy-wrapper">
+								<p class="mb-2 hero-line hero-line-1" style="font-size: 1.1rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase;" data-translate="hero.tagline">3A DURIAN</p>
+								<h1 class="mb-2 hero-line hero-line-2" data-translate="hero.title1">MALAYSIA</h1>
+								<h2 class="mb-3 hero-line hero-line-3" data-translate="hero.title2">Fruits Tapas</h2>
+								<p class="mb-1 hero-line hero-line-4" style="font-size: 1.4rem; font-weight: 600;" data-translate="hero.subtitle1">The Taste of Tropical</p>
+								<p class="mb-0 hero-line hero-line-5" style="font-size: 1.2rem; font-weight: 500;" data-translate="hero.subtitle2">The Malaysia Premium Fusion Desserts.</p>
+							</div>
+						</div>
 					</div>
-					<div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)); z-index: 1;"></div>
 				</div>
 
 				<!-- Our Story Section -->
@@ -530,7 +552,7 @@
 							</div>
 							<div class="col-lg-6 stagger-item">
 								<video controls autoplay loop muted style="width: 100%; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
-									<source src="videos/3adurian-2.mp4" type="video/mp4">
+									<source src="videos/3adurian-3.mp4" type="video/mp4">
 									Your browser does not support the video tag.
 								</video>
 							</div>
@@ -602,7 +624,7 @@
 
 				<div class="row justify-content-center">
 					<div class="col-12 col-lg-8 text-center">
-						<p class="mb-2 text-white" data-translate="footer.rights">© 2025 3Adurian. All Rights Reserved.
+						<p class="mb-2 text-white" data-translate="footer.rights">© 2026 3Adurian. All Rights Reserved.
 						</p>
 						<p class="mb-2 text-white"><span data-translate="footer.website">Website</span>: <a href="https://3adurian.com" target="_blank" style="color: yellow;">3adurian.com</a> | <span data-translate="footer.email">Email</span>: <a href="mailto:3adurian2025@gmail.com" style="color: yellow;">3adurian2025@gmail.com</a></p>
 					</div>
@@ -618,7 +640,7 @@
 
 	<!-- Floating Contact Bubbles -->
 	<div class="floating-contacts">
-		<a href="https://wa.me/60122739293" target="_blank" class="contact-bubble whatsapp-bubble">
+		<a href="https://wa.me/60197344930" target="_blank" class="contact-bubble whatsapp-bubble">
 			<i class="fab fa-whatsapp"></i>
 			<div class="tooltip" data-translate="contact.whatsapp">Chat on WhatsApp</div>
 		</a>

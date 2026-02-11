@@ -349,12 +349,8 @@
 				<div class="container">
 					<div class="header-row">
 
-						<!-- Logo
-						============================================= -->
-						<div id="logo">
-							<a href="index.html" class="standard-logo" data-sticky-logo="images/logo/3adurian-logo.png"><img src="images/logo/3adurian-logo.png" alt="3Adurian Logo"></a>
-							<a href="index.html" class="retina-logo" data-sticky-logo="images/logo/3adurian-logo.png"><img src="images/logo/3adurian-logo.png" alt="3Adurian Logo"></a>
-						</div><!-- #logo end -->
+						<!-- Logo -->
+						<div id="logo"></div><!-- #logo end -->
 
 						<div class="header-misc">
 							<div class="language-switcher">
@@ -404,9 +400,9 @@
 		<section id="content">
 			<div class="content-wrap pt-0 pb-0">
 
-				<section id="page-title" class="page-title-center d-flex align-items-center vh-50" style="background-image: linear-gradient(#05309750 , #05319750), url('images/products-banner.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center center;">
+				<section id="page-title" class="page-title-center d-flex align-items-center vh-30" style="background-image: linear-gradient(135deg, #F4D03F 0%, #F1C40F 50%, #7CB342 100%), url('images/products-banner.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center center;">
 					<div class="container clearfix">
-						<h1 class="display-4 ls0 nott text-white" data-translate="products.title">Premium Products</h1>
+						<h1 class="display-4 ls0 nott text-white" data-translate="products.title">Our Products</h1>
 					</div>
 				</section>
 
@@ -414,26 +410,23 @@
 
 				<div id="products" class="section mt-0 pt-md-5 pt-0 mb-0">
 					<div class="container clearfix">
-						<!-- Video/Photo Section -->
-						<div class="row mb-5">
-							<div class="col-md-6 mb-4">
-								<video controls autoplay loop muted style="width: 100%; height: auto; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.15);">
-									<source src="videos/3adurian-1.mp4" type="video/mp4">
-									Your browser does not support the video tag.
-								</video>
+						<!-- Intro Video + Text -->
+						<div class="row mb-5 align-items-center">
+							<div class="col-md-4 mb-4 d-flex justify-content-center">
+								<div style="max-width: 480px; width: 100%; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.15);">
+									<video controls autoplay loop muted style="width: 100%; height: auto; display: block;">
+										<source src="videos/3adurian-2.mp4" type="video/mp4">
+										Your browser does not support the video tag.
+									</video>
+								</div>
 							</div>
-							<div class="col-md-6 mb-4">
-								<video controls autoplay loop muted style="width: 100%; height: auto; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.15);">
-									<source src="videos/3adurian-2.mp4" type="video/mp4">
-									Your browser does not support the video tag.
-								</video>
-							</div>
-						</div>
-
-						<!-- Short Description -->
-						<div class="row mb-5">
-							<div class="col-12 text-center">
-								<p class="lead" style="font-size: 1.2rem; color: #333;" data-translate="products.video.description">Experience the finest tropical fruit fusion desserts, crafted with premium ingredients and traditional Malaysian flavors.</p>
+							<div class="col-md-8 mb-4">
+								<p class="lead mb-3" style="font-size: 1.2rem; color: #333;" data-translate="products.video.description">
+									Experience the finest tropical fruit fusion desserts, crafted with premium ingredients and traditional Malaysian flavors.
+								</p>
+								<p style="color: #666;" data-translate="products.video.description2">
+									From rich Musang King creations to fragrant pandan coconut and fragrant cempedak, each dessert is handcrafted to highlight the natural taste of tropical Malaysia.
+								</p>
 							</div>
 						</div>
 
@@ -467,33 +460,43 @@
 
 						<!-- Taste Profile Section -->
 						<div class="row taste-profile-section">
-							<div class="col-12 mb-5">
+							<div class="col-12 mb-3">
 								<h2 class="text-center mb-5" style="color: #F4D03F;" data-translate="products.taste.title">Taste Profile</h2>
 							</div>
 
 							<!-- Durian Desserts -->
 							<div class="col-lg-4 col-md-6 mb-5">
 								<div class="card shadow-sm border-light h-100" style="transform: none !important;">
-									<img src="images/products/3adurian-durian-cream-cheese-cake.jpeg" alt="Durian Desserts" class="card-img-top" style="height: 300px; object-fit: cover; cursor: pointer; transform: none !important;" onclick="openLightbox(this.src, this.alt)">
 									<div class="card-body text-center">
-										<h3 class="mb-4" style="color: #F4D03F;" data-translate="products.durian.title">i. Durian Desserts</h3>
 										<div class="product-gallery mb-3">
 											<div class="row">
 												<div class="col-6 mb-2">
 													<img src="images/products/3adurian-durian-cream-cheese-cake.jpeg" alt="Durian Cream Cheese" class="product-thumb" style="width: 100%; border-radius: 8px; cursor: pointer;" onclick="openLightbox(this.src, this.alt)">
-													<p class="mb-0 mt-1" style="font-size: 0.85rem;" data-translate="products.durian.item1">Durian Cream Cheese</p>
+													<p class="mb-0 mt-1" style="font-size: 0.85rem; color: #F4D03F;">
+														<span data-translate="products.durian.item1">Durian Cream Cheese</span><br>
+														<span class="product-price">Price: RM --</span>
+													</p>
 												</div>
 												<div class="col-6 mb-2">
 													<img src="images/products/3adurian-durian-tiramisu.jpeg" alt="Durian Tiramisu" class="product-thumb" style="width: 100%; border-radius: 8px; cursor: pointer;" onclick="openLightbox(this.src, this.alt)">
-													<p class="mb-0 mt-1" style="font-size: 0.85rem;" data-translate="products.durian.item2">Durian Tiramisu</p>
+													<p class="mb-0 mt-1" style="font-size: 0.85rem; color: #F4D03F;">
+														<span data-translate="products.durian.item2">Durian Tiramisu</span><br>
+														<span class="product-price">Price: RM --</span>
+													</p>
 												</div>
 												<div class="col-6 mb-2">
 													<img src="images/products/3adurian-musang-king-durian-cream-cheese.jpeg" alt="Musang King Durian Cream Cheese" class="product-thumb" style="width: 100%; border-radius: 8px; cursor: pointer;" onclick="openLightbox(this.src, this.alt)">
-													<p class="mb-0 mt-1" style="font-size: 0.85rem;" data-translate="products.durian.item3">Musang King Cream Cheese</p>
+													<p class="mb-0 mt-1" style="font-size: 0.85rem; color: #F4D03F;">
+														<span data-translate="products.durian.item3">Musang King Cream Cheese</span><br>
+														<span class="product-price">Price: RM --</span>
+													</p>
 												</div>
 												<div class="col-6 mb-2">
 													<img src="images/products/3adurian-musang-king-durian-tiramisu.jpeg" alt="Musang King Durian Tiramisu" class="product-thumb" style="width: 100%; border-radius: 8px; cursor: pointer;" onclick="openLightbox(this.src, this.alt)">
-													<p class="mb-0 mt-1" style="font-size: 0.85rem;" data-translate="products.durian.item4">Musang King Tiramisu</p>
+													<p class="mb-0 mt-1" style="font-size: 0.85rem; color: #F4D03F;">
+														<span data-translate="products.durian.item4">Musang King Tiramisu</span><br>
+														<span class="product-price">Price: RM --</span>
+													</p>
 												</div>
 											</div>
 										</div>
@@ -504,18 +507,22 @@
 							<!-- Pandan Coconuts Desserts -->
 							<div class="col-lg-4 col-md-6 mb-5">
 								<div class="card shadow-sm border-light h-100" style="transform: none !important;">
-									<img src="images/products/3adurian-pandan-coconut-cream-cheese-cake.jpeg" alt="Pandan Coconut Desserts" class="card-img-top" style="height: 300px; object-fit: cover; cursor: pointer; transform: none !important;" onclick="openLightbox(this.src, this.alt)">
 									<div class="card-body text-center">
-										<h3 class="mb-4" style="color: #7CB342;" data-translate="products.pandan.title">ii. Pandan Coconuts Desserts</h3>
 										<div class="product-gallery mb-3">
 											<div class="row">
 												<div class="col-6 mb-2">
 													<img src="images/products/3adurian-pandan-coconut-cream-cheese-cake.jpeg" alt="Pandan Coconut Cream Cheese" class="product-thumb" style="width: 100%; border-radius: 8px; cursor: pointer;" onclick="openLightbox(this.src, this.alt)">
-													<p class="mb-0 mt-1" style="font-size: 0.85rem;" data-translate="products.pandan.item1">Pandan Coconut Cream Cheese</p>
+													<p class="mb-0 mt-1" style="font-size: 0.85rem; color: #7CB342;">
+														<span data-translate="products.pandan.item1">Pandan Coconut Cream Cheese</span><br>
+														<span class="product-price">Price: RM --</span>
+													</p>
 												</div>
 												<div class="col-6 mb-2">
 													<img src="images/products/3adurian-pandan-coconut-tiramisu.jpeg" alt="Pandan Coconut Tiramisu" class="product-thumb" style="width: 100%; border-radius: 8px; cursor: pointer;" onclick="openLightbox(this.src, this.alt)">
-													<p class="mb-0 mt-1" style="font-size: 0.85rem;" data-translate="products.pandan.item2">Pandan Coconut Tiramisu</p>
+													<p class="mb-0 mt-1" style="font-size: 0.85rem; color: #7CB342;">
+														<span data-translate="products.pandan.item2">Pandan Coconut Tiramisu</span><br>
+														<span class="product-price">Price: RM --</span>
+													</p>
 												</div>
 											</div>
 										</div>
@@ -526,18 +533,22 @@
 							<!-- Cempedak Desserts -->
 							<div class="col-lg-4 col-md-6 mb-5">
 								<div class="card shadow-sm border-light h-100" style="transform: none !important;">
-									<img src="images/products/3adurian-cempedak-cream-cheese-cake.jpeg" alt="Cempedak Desserts" class="card-img-top" style="height: 300px; object-fit: cover; cursor: pointer; transform: none !important;" onclick="openLightbox(this.src, this.alt)">
 									<div class="card-body text-center">
-										<h3 class="mb-4" style="color: #F4D03F;" data-translate="products.cempedak.title">iii. Cempedak Desserts</h3>
 										<div class="product-gallery mb-3">
 											<div class="row">
 												<div class="col-6 mb-2">
 													<img src="images/products/3adurian-cempedak-cream-cheese-cake.jpeg" alt="Cempedak Cream Cheese" class="product-thumb" style="width: 100%; border-radius: 8px; cursor: pointer;" onclick="openLightbox(this.src, this.alt)">
-													<p class="mb-0 mt-1" style="font-size: 0.85rem;" data-translate="products.cempedak.item1">Cempedak Cream Cheese</p>
+													<p class="mb-0 mt-1" style="font-size: 0.85rem; color: #E91E63;">
+														<span data-translate="products.cempedak.item1">Cempedak Cream Cheese</span><br>
+														<span class="product-price">Price: RM --</span>
+													</p>
 												</div>
 												<div class="col-6 mb-2">
 													<img src="images/products/3adurian-cempedak-tiramisu.jpeg" alt="Cempedak Tiramisu" class="product-thumb" style="width: 100%; border-radius: 8px; cursor: pointer;" onclick="openLightbox(this.src, this.alt)">
-													<p class="mb-0 mt-1" style="font-size: 0.85rem;" data-translate="products.cempedak.item2">Cempedak Tiramisu</p>
+													<p class="mb-0 mt-1" style="font-size: 0.85rem; color: #E91E63;">
+														<span data-translate="products.cempedak.item2">Cempedak Tiramisu</span><br>
+														<span class="product-price">Price: RM --</span>
+													</p>
 												</div>
 											</div>
 										</div>
@@ -565,7 +576,18 @@
 					<div class="row justify-content-center">
 						<div class="col-12 col-lg-8 text-center">
 							<p class="mb-2 text-white" data-translate="footer.rights">© 2026 3Adurian. All Rights Reserved.</p>
-							<p class="mb-2 text-white"><span data-translate="footer.website">Website</span>: <a href="https://3adurian.com" target="_blank" style="color: yellow;">3adurian.com</a> | <span data-translate="footer.email">Email</span>: <a href="mailto:3adurian2025@gmail.com" style="color: yellow;">3adurian2025@gmail.com</a></p>
+							<p class="mb-2 text-white">
+								<span data-translate="footer.website">Website</span>:
+								<a href="https://3adurian.com" target="_blank" style="color: yellow;">3adurian.com</a>
+								|
+								<span data-translate="footer.email">Email</span>:
+								<a href="mailto:3adurian2025@gmail.com" style="color: yellow;">3adurian2025@gmail.com</a>
+								|
+								<span>Facebook</span>:
+								<a href="https://www.facebook.com/profile.php?id=61580287135165" target="_blank" style="color: yellow;">
+									<i class="fab fa-facebook-f"></i> 3A Durian
+								</a>
+							</p>
 						</div>
 					</div>
 

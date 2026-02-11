@@ -33,6 +33,9 @@
 	============================================= -->
 	<title>Home | 3Adurian - Premium Fusion Desserts</title>
 
+	<!-- Hero font: soft, tropical style -->
+	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+
 	<style>
 		:root {
 			--font-montserrat: 'Montserrat', sans-serif;
@@ -303,7 +306,7 @@
 
 		/* New Hero Section (Image + Text) */
 		.hero-main-section {
-			background: linear-gradient(135deg, #f9fbe7 0%, #fffde7 100%);
+			background: linear-gradient(135deg, #FFFDE7 0%, #FFF9C4 40%, #FFF59D 100%);
 			padding: 80px 0;
 		}
 		.hero-main-section .container {
@@ -313,15 +316,21 @@
 			text-align: center;
 		}
 		.hero-image {
-			max-width: 100%;
+			max-width: 60%;
 			height: auto;
-			filter: drop-shadow(0 15px 35px rgba(0, 0, 0, 0.25));
+			filter: drop-shadow(0 12px 28px rgba(0, 0, 0, 0.25));
 			opacity: 0;
 			transform: translateX(40px);
 			animation: heroImageIn 0.8s ease forwards 0.1s;
 		}
 		.hero-copy-wrapper {
 			color: #1b5e20;
+			font-family: 'Quicksand', var(--font-montserrat), sans-serif !important;
+		}
+		.hero-copy-wrapper h1,
+		.hero-copy-wrapper h2,
+		.hero-copy-wrapper p {
+			font-family: 'Quicksand', var(--font-montserrat), sans-serif !important;
 		}
 		.hero-copy-wrapper .hero-line {
 			opacity: 0;
@@ -331,19 +340,22 @@
 
 		.hero-copy-wrapper h1 {
 			font-size: 3rem;
-			font-weight: 800;
+			font-weight: 700;
 		}
 		.hero-copy-wrapper h2 {
 			font-size: 2.2rem;
-			font-weight: 700;
+			font-weight: 600;
 		}
 		.hero-copy-wrapper p {
 			font-size: 1.2rem;
 		}
 
-		/* Themed hero colors */
+		/* Themed hero colors & sizing */
 		.hero-line-1 {
 			color: #7CB342; /* bright green accent */
+			font-weight: 700;
+			letter-spacing: 2px;
+			text-transform: uppercase;
 		}
 		.hero-line-2 {
 			color: #1B5E20; /* deep durian green */
@@ -448,14 +460,8 @@
 				<div class="container">
 					<div class="header-row">
 
-						<!-- Logo
-						============================================= -->
-						<div id="logo">
-							<a href="index.html" class="standard-logo" data-sticky-logo="images/logo/3adurian-logo.png"><img
-									src="images/logo/3adurian-logo.png" alt="3Adurian Logo"></a>
-							<a href="index.html" class="retina-logo" data-sticky-logo="images/logo/3adurian-logo.png"><img
-									src="images/logo/3adurian-logo.png" alt="3Adurian Logo"></a>
-						</div><!-- #logo end -->
+						<!-- Logo -->
+						<div id="logo"></div><!-- #logo end -->
 
 						<div class="header-misc">
 							<div class="language-switcher">
@@ -529,7 +535,7 @@
 								<img src="images/products/3adurian-musang-king-durian-tiramisu.jpeg" alt="Musang King Tiramisu" class="hero-image">
 							</div>
 							<div class="col-lg-6 hero-copy-wrapper">
-								<p class="mb-2 hero-line hero-line-1" style="font-size: 1.1rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase;" data-translate="hero.tagline">3A DURIAN</p>
+								<h1 class="mb-2 hero-line hero-line-1" data-translate="hero.tagline">3A DURIAN</h1>
 								<h1 class="mb-2 hero-line hero-line-2" data-translate="hero.title1">MALAYSIA</h1>
 								<h2 class="mb-3 hero-line hero-line-3" data-translate="hero.title2">Fruits Tapas</h2>
 								<p class="mb-1 hero-line hero-line-4" style="font-size: 1.4rem; font-weight: 600;" data-translate="hero.subtitle1">The Taste of Tropical</p>
@@ -550,8 +556,8 @@
 								<p data-translate="story.description">Specializing in durian, pandan coconut, and cempedak creations, we craft each dessert with meticulous care, introducing the rich heritage and unmatched flavors of Malaysian tropical fruits to discerning palates worldwide.</p>
 							</div>
 							</div>
-							<div class="col-lg-6 stagger-item">
-								<video controls autoplay loop muted style="width: 100%; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+							<div class="col-lg-6 stagger-item d-flex justify-content-center">
+								<video controls autoplay loop muted style="width: 80%; max-width: 480px; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
 									<source src="videos/3adurian-3.mp4" type="video/mp4">
 									Your browser does not support the video tag.
 								</video>
@@ -626,7 +632,18 @@
 					<div class="col-12 col-lg-8 text-center">
 						<p class="mb-2 text-white" data-translate="footer.rights">© 2026 3Adurian. All Rights Reserved.
 						</p>
-						<p class="mb-2 text-white"><span data-translate="footer.website">Website</span>: <a href="https://3adurian.com" target="_blank" style="color: yellow;">3adurian.com</a> | <span data-translate="footer.email">Email</span>: <a href="mailto:3adurian2025@gmail.com" style="color: yellow;">3adurian2025@gmail.com</a></p>
+						<p class="mb-2 text-white">
+							<span data-translate="footer.website">Website</span>:
+							<a href="https://3adurian.com" target="_blank" style="color: yellow;">3adurian.com</a>
+							|
+							<span data-translate="footer.email">Email</span>:
+							<a href="mailto:3adurian2025@gmail.com" style="color: yellow;">3adurian2025@gmail.com</a>
+							|
+							<span>Facebook</span>:
+							<a href="https://www.facebook.com/profile.php?id=61580287135165" target="_blank" style="color: yellow;">
+								<i class="fab fa-facebook-f"></i> 3A Durian
+							</a>
+						</p>
 					</div>
 				</div>
 

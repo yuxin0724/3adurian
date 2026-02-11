@@ -68,6 +68,20 @@ ul.icons-list li i{
 	position: relative;
 	z-index: 1;
 }
+
+/* Keep header & language dropdown always above page-title */
+#header,
+#header-wrap {
+	z-index: 5000 !important;
+}
+
+.language-switcher {
+	z-index: 6000 !important;
+}
+
+.language-dropdown {
+	z-index: 7000 !important;
+}
 .mobile-padding .card-body h4{
 	min-height: 50px;
 }

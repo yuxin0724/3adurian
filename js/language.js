@@ -32,7 +32,7 @@ const translations = {
 		'contact.whatsapp': 'Chat on WhatsApp',
 		'contact.wechat': 'WeChat: 3adurian2025',
 		// Products page
-		'products.title': 'Our Products',
+		'products.title': 'Products',
 		'products.video.description': 'Experience the finest tropical fruit fusion desserts, crafted with premium ingredients and traditional Malaysian flavors.',
 		'products.video.description2': 'From rich Musang King creations to fragrant pandan coconut and fragrant cempedak, each dessert is handcrafted to highlight the natural taste of tropical Malaysia.',
 		'products.features.title1': 'Without Preservative',
@@ -113,7 +113,7 @@ const translations = {
 		'contact.whatsapp': 'Sembang di WhatsApp',
 		'contact.wechat': 'WeChat: 3adurian2025',
 		// Products page
-		'products.title': 'Produk Kami',
+		'products.title': 'Produk',
 		'products.video.description': 'Alami pencuci mulut fusion buah tropika terbaik, dibuat dengan bahan premium dan citarasa tradisional Malaysia.',
 		'products.video.description2': 'Daripada ciptaan Musang King yang kaya kepada pandan kelapa yang harum dan cempedak yang wangi, setiap pencuci mulut dihasilkan dengan teliti untuk menyerlahkan rasa semula jadi Malaysia tropika.',
 		'products.features.title1': 'Tanpa Pengawet',
@@ -194,7 +194,7 @@ const translations = {
 		'contact.whatsapp': '在WhatsApp聊天',
 		'contact.wechat': '微信: 3adurian2025',
 		// Products page
-		'products.title': '我们的产品',
+		'products.title': '产品',
 		'products.video.description': '体验最优质的热带水果融合甜品，采用优质食材和传统马来西亚风味制作。',
 		'products.video.description2': '从浓郁的猫山王创作到清香的班兰椰子以及芬芳的杰卡果，每一款甜品都经过精心制作，突出马来西亚热带水果的自然风味。',
 		'products.features.title1': '无防腐剂',

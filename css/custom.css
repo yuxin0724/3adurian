@@ -5,13 +5,13 @@
 	Overwriting Default Theme Styles for Better Handling Updates
 -----------------------------------------------------------------*/
 
-/* Montserrat Font Override */
+/* Global Font: Lexend */
 :root {
-	--font-montserrat: 'Montserrat', sans-serif;
+	--font-main: 'Lexend', sans-serif;
 }
 
 body, html {
-	font-family: var(--font-montserrat), sans-serif !important;
+	font-family: var(--font-main), sans-serif !important;
 }
 
 /* Ensure icons use their proper font families */
@@ -22,11 +22,11 @@ i[class*=" icon-"],
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: var(--font-montserrat), sans-serif !important;
+	font-family: var(--font-main), sans-serif !important;
 }
 
 .menu-link, .button, .btn, a, p, span, div {
-	font-family: var(--font-montserrat), sans-serif !important;
+	font-family: var(--font-main), sans-serif !important;
 }
 
 .menu-item:hover>.menu-link,

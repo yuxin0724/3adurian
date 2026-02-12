@@ -664,16 +664,24 @@
 			}
 		});
 		
-		// Gallery hover effects
+		// Gallery hover effects (desktop) & always-visible titles on mobile
 		document.querySelectorAll('.gallery-item').forEach(item => {
-			item.addEventListener('mouseenter', function() {
-				this.querySelector('.gallery-overlay').style.opacity = '1';
-				this.querySelector('img').style.transform = 'scale(1.1)';
-			});
-			item.addEventListener('mouseleave', function() {
-				this.querySelector('.gallery-overlay').style.opacity = '0';
-				this.querySelector('img').style.transform = 'scale(1)';
-			});
+			const overlay = item.querySelector('.gallery-overlay');
+			const img = item.querySelector('img');
+
+			// On mobile (touch widths), show overlay by default so product names are visible
+			if (window.matchMedia('(max-width: 768px)').matches) {
+				if (overlay) overlay.style.opacity = '1';
+			} else {
+				item.addEventListener('mouseenter', function() {
+					if (overlay) overlay.style.opacity = '1';
+					if (img) img.style.transform = 'scale(1.1)';
+				});
+				item.addEventListener('mouseleave', function() {
+					if (overlay) overlay.style.opacity = '0';
+					if (img) img.style.transform = 'scale(1)';
+				});
+			}
 		});
 	</script>
 	

@@ -335,22 +335,11 @@ video:hover {
 }
 
 /* Loading State */
+/* Allow scrolling immediately; only prevent horizontal overflow before load */
 body:not(.loaded) {
-	overflow: hidden;
+	overflow-x: hidden;
 }
 
-body.loaded {
-	animation: fadeIn 0.5s ease;
-}
-
-@keyframes fadeIn {
-	from {
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
-	}
-}
 
 /* Smooth Scroll */
 html {

@@ -279,6 +279,13 @@
 		.product-gallery {
 			margin-top: 15px;
 		}
+
+		/* Product text & price alignment */
+		.product-title {
+			display: block;
+			min-height: 2.4em; /* ensures 1–2 lines align across cards */
+			line-height: 1.2;
+		}
 		
 		/* Image Lightbox */
 		.image-lightbox {
@@ -396,12 +403,12 @@
 
 				<div class="clear"></div>
 
-				<div id="products" class="section mt-0 pt-md-5 pt-0 mb-0">
+				<div id="products" class="section mt-0 pt-md-5 pt-4 mb-0">
 					<div class="container clearfix">
 						<!-- Intro Video + Text -->
 						<div class="row mb-5 align-items-center">
 							<div class="col-md-4 mb-4 d-flex justify-content-center">
-								<div style="max-width: 480px; width: 100%; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.15);">
+								<div style="max-width: 480px; width: 70%; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.15);">
 									<video controls autoplay loop muted style="width: 100%; height: auto; display: block;">
 										<source src="videos/3adurian-2.mp4" type="video/mp4">
 										Your browser does not support the video tag.
@@ -458,33 +465,45 @@
 									<div class="card-body text-center">
 										<div class="product-gallery mb-3">
 											<div class="row">
-												<div class="col-6 mb-2">
+												<div class="col-6 mb-3">
 													<img src="images/products/3adurian-durian-cream-cheese-cake.jpeg" alt="Durian Cream Cheese" class="product-thumb" style="width: 100%; border-radius: 8px; cursor: pointer;" onclick="openLightbox(this.src, this.alt)">
-													<p class="mb-0 mt-1" style="font-size: 0.85rem; color: #F4D03F;">
-														<span data-translate="products.durian.item1">Durian Cream Cheese</span><br>
-														<span class="product-price">Price: RM --</span>
-													</p>
+													<div class="mt-2" style="font-size: 0.87rem; color: #F4D03F;">
+														<strong class="product-title" data-translate="products.durian.item1">Durian Cream Cheese</strong>
+														<div class="product-price" style="margin-top: 2px; font-size: 0.8rem; color: #555;">
+															<div><span style="font-weight: 600;">120g</span> &mdash; RM 15.80</div>
+															<div><span style="font-weight: 600;">200g</span> &mdash; RM 18.80</div>
+														</div>
+													</div>
 												</div>
-												<div class="col-6 mb-2">
+												<div class="col-6 mb-3">
 													<img src="images/products/3adurian-durian-tiramisu.jpeg" alt="Durian Tiramisu" class="product-thumb" style="width: 100%; border-radius: 8px; cursor: pointer;" onclick="openLightbox(this.src, this.alt)">
-													<p class="mb-0 mt-1" style="font-size: 0.85rem; color: #F4D03F;">
-														<span data-translate="products.durian.item2">Durian Tiramisu</span><br>
-														<span class="product-price">Price: RM --</span>
-													</p>
+													<div class="mt-2" style="font-size: 0.87rem; color: #F4D03F;">
+														<strong class="product-title" data-translate="products.durian.item2">Durian Tiramisu</strong>
+														<div class="product-price" style="margin-top: 2px; font-size: 0.8rem; color: #555;">
+															<div><span style="font-weight: 600;">120g</span> &mdash; RM 16.80</div>
+															<div><span style="font-weight: 600;">200g</span> &mdash; RM 19.80</div>
+														</div>
+													</div>
 												</div>
-												<div class="col-6 mb-2">
+												<div class="col-6 mb-3">
 													<img src="images/products/3adurian-musang-king-durian-cream-cheese.jpeg" alt="Musang King Durian Cream Cheese" class="product-thumb" style="width: 100%; border-radius: 8px; cursor: pointer;" onclick="openLightbox(this.src, this.alt)">
-													<p class="mb-0 mt-1" style="font-size: 0.85rem; color: #F4D03F;">
-														<span data-translate="products.durian.item3">Musang King Cream Cheese</span><br>
-														<span class="product-price">Price: RM --</span>
-													</p>
+													<div class="mt-2" style="font-size: 0.87rem; color: #F4D03F;">
+														<strong class="product-title" data-translate="products.durian.item3">Musang King Cream Cheese</strong>
+														<div class="product-price" style="margin-top: 2px; font-size: 0.8rem; color: #555;">
+															<div><span style="font-weight: 600;">120g</span> &mdash; RM 18.80</div>
+															<div><span style="font-weight: 600;">200g</span> &mdash; RM 21.80</div>
+														</div>
+													</div>
 												</div>
-												<div class="col-6 mb-2">
+												<div class="col-6 mb-3">
 													<img src="images/products/3adurian-musang-king-durian-tiramisu.jpeg" alt="Musang King Durian Tiramisu" class="product-thumb" style="width: 100%; border-radius: 8px; cursor: pointer;" onclick="openLightbox(this.src, this.alt)">
-													<p class="mb-0 mt-1" style="font-size: 0.85rem; color: #F4D03F;">
-														<span data-translate="products.durian.item4">Musang King Tiramisu</span><br>
-														<span class="product-price">Price: RM --</span>
-													</p>
+													<div class="mt-2" style="font-size: 0.87rem; color: #F4D03F;">
+														<strong class="product-title" data-translate="products.durian.item4">Musang King Tiramisu</strong>
+														<div class="product-price" style="margin-top: 2px; font-size: 0.8rem; color: #555;">
+															<div><span style="font-weight: 600;">120g</span> &mdash; RM 18.80</div>
+															<div><span style="font-weight: 600;">200g</span> &mdash; RM 21.80</div>
+														</div>
+													</div>
 												</div>
 											</div>
 										</div>
@@ -498,19 +517,25 @@
 									<div class="card-body text-center">
 										<div class="product-gallery mb-3">
 											<div class="row">
-												<div class="col-6 mb-2">
+												<div class="col-6 mb-3">
 													<img src="images/products/3adurian-pandan-coconut-cream-cheese-cake.jpeg" alt="Pandan Coconut Cream Cheese" class="product-thumb" style="width: 100%; border-radius: 8px; cursor: pointer;" onclick="openLightbox(this.src, this.alt)">
-													<p class="mb-0 mt-1" style="font-size: 0.85rem; color: #7CB342;">
-														<span data-translate="products.pandan.item1">Pandan Coconut Cream Cheese</span><br>
-														<span class="product-price">Price: RM --</span>
-													</p>
+													<div class="mt-2" style="font-size: 0.87rem; color: #7CB342;">
+														<strong class="product-title" data-translate="products.pandan.item1">Pandan Coconut Cream Cheese</strong>
+														<div class="product-price" style="margin-top: 2px; font-size: 0.8rem; color: #555;">
+															<div><span style="font-weight: 600;">120g</span> &mdash; RM 15.80</div>
+															<div><span style="font-weight: 600;">200g</span> &mdash; RM 18.80</div>
+														</div>
+													</div>
 												</div>
-												<div class="col-6 mb-2">
+												<div class="col-6 mb-3">
 													<img src="images/products/3adurian-pandan-coconut-tiramisu.jpeg" alt="Pandan Coconut Tiramisu" class="product-thumb" style="width: 100%; border-radius: 8px; cursor: pointer;" onclick="openLightbox(this.src, this.alt)">
-													<p class="mb-0 mt-1" style="font-size: 0.85rem; color: #7CB342;">
-														<span data-translate="products.pandan.item2">Pandan Coconut Tiramisu</span><br>
-														<span class="product-price">Price: RM --</span>
-													</p>
+													<div class="mt-2" style="font-size: 0.87rem; color: #7CB342;">
+														<strong class="product-title" data-translate="products.pandan.item2">Pandan Coconut Tiramisu</strong>
+														<div class="product-price" style="margin-top: 2px; font-size: 0.8rem; color: #555;">
+															<div><span style="font-weight: 600;">120g</span> &mdash; RM 16.80</div>
+															<div><span style="font-weight: 600;">200g</span> &mdash; RM 19.80</div>
+														</div>
+													</div>
 												</div>
 											</div>
 										</div>
@@ -524,19 +549,25 @@
 									<div class="card-body text-center">
 										<div class="product-gallery mb-3">
 											<div class="row">
-												<div class="col-6 mb-2">
+												<div class="col-6 mb-3">
 													<img src="images/products/3adurian-cempedak-cream-cheese-cake.jpeg" alt="Cempedak Cream Cheese" class="product-thumb" style="width: 100%; border-radius: 8px; cursor: pointer;" onclick="openLightbox(this.src, this.alt)">
-													<p class="mb-0 mt-1" style="font-size: 0.85rem; color: #E91E63;">
-														<span data-translate="products.cempedak.item1">Cempedak Cream Cheese</span><br>
-														<span class="product-price">Price: RM --</span>
-													</p>
+													<div class="mt-2" style="font-size: 0.87rem; color: #E91E63;">
+														<strong class="product-title" data-translate="products.cempedak.item1">Cempedak Cream Cheese</strong>
+														<div class="product-price" style="margin-top: 2px; font-size: 0.8rem; color: #555;">
+															<div><span style="font-weight: 600;">120g</span> &mdash; RM 14.80</div>
+															<div><span style="font-weight: 600;">200g</span> &mdash; RM 17.80</div>
+														</div>
+													</div>
 												</div>
-												<div class="col-6 mb-2">
+												<div class="col-6 mb-3">
 													<img src="images/products/3adurian-cempedak-tiramisu.jpeg" alt="Cempedak Tiramisu" class="product-thumb" style="width: 100%; border-radius: 8px; cursor: pointer;" onclick="openLightbox(this.src, this.alt)">
-													<p class="mb-0 mt-1" style="font-size: 0.85rem; color: #E91E63;">
-														<span data-translate="products.cempedak.item2">Cempedak Tiramisu</span><br>
-														<span class="product-price">Price: RM --</span>
-													</p>
+													<div class="mt-2" style="font-size: 0.87rem; color: #E91E63;">
+														<strong class="product-title" data-translate="products.cempedak.item2">Cempedak Tiramisu</strong>
+														<div class="product-price" style="margin-top: 2px; font-size: 0.8rem; color: #555;">
+															<div><span style="font-weight: 600;">120g</span> &mdash; RM 15.80</div>
+															<div><span style="font-weight: 600;">200g</span> &mdash; RM 18.80</div>
+														</div>
+													</div>
 												</div>
 											</div>
 										</div>

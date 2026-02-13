@@ -3,6 +3,17 @@
 
 <head>
 
+	<!-- Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-7VMF699VTN"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+	  
+		gtag('config', 'G-7VMF699VTN');
+	</script>
+	<!-- End Google Analytics -->
+
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta name="author" content="" />
 	<link rel="icon" type="image/png" href="images/logo/3adurian-logo.png">
@@ -258,6 +269,10 @@
 				padding: 6px 12px;
 				font-size: 12px;
 			}
+			
+			#logo {
+				font-size: 1rem !important;
+			}
 		}
 		
 		#sectors .card-body {
@@ -312,14 +327,7 @@
 			color: #1b5e20;
 		}
 
-		/* Hero titles use Montserrat Bold */
-		.hero-line-1,
-		.hero-line-2 {
-			font-family: 'Montserrat', sans-serif !important;
-			font-weight: 800 !important;
-		}
-
-		/* Other hero text uses Lexend via global styles */
+		/* Hero text uses Lexend via global styles */
 		.hero-copy-wrapper .hero-line {
 			opacity: 0;
 			transform: translateY(20px);
@@ -334,28 +342,20 @@
 			font-size: 2.2rem;
 			font-weight: 600;
 		}
-		.hero-copy-wrapper p {
-			font-size: 1.2rem;
-		}
 
-		/* Themed hero colors & sizing (two green tones across all lines) */
-		.hero-line-1 {
-			color: #7CB342; /* bright durian green */
-			font-weight: 700;
-			letter-spacing: 2px;
-			text-transform: uppercase;
+		/* Hero logo wrapper */
+		.hero-logo-wrapper {
+			opacity: 0;
+			transform: translateY(20px);
+			transition: opacity 0.8s ease, transform 0.8s ease;
 		}
-		.hero-line-2 {
+		
+		/* Hero lines 3-5: same size and color */
+		.hero-line-3-5 {
 			color: #7CB342;
-		}
-		.hero-line-3 {
-			color: #1B5E20; /* deep durian green */
-		}
-		.hero-line-4 {
-			color: #1B5E20;
-		}
-		.hero-line-5 {
-			color: #1B5E20; /* deep durian green */
+			font-size: 2.5rem;
+			font-weight: 600;
+			white-space: nowrap;
 		}
 
 		@keyframes heroImageIn {
@@ -370,6 +370,12 @@
 			.hero-copy-wrapper {
 				margin-top: 30px;
 				text-align: center;
+			}
+
+			/* Smaller hero text on tablets & mobile, allow wrapping */
+			.hero-line-3-5 {
+				font-size: 1.6rem;
+				white-space: normal;
 			}
 		}
 
@@ -448,8 +454,8 @@
 				<div class="container">
 					<div class="header-row">
 
-						<!-- Logo -->
-						<div id="logo"></div><!-- #logo end -->
+					<!-- Logo -->
+					<div id="logo" style="color: #1B5E20; font-weight: 600; font-size: 1.5rem;">3A Durian(M)Sdn.Bhd</div><!-- #logo end -->
 
 						<div class="header-misc">
 							<div class="language-switcher">
@@ -520,16 +526,15 @@
 					<div class="container clearfix">
 						<div class="row align-items-center">
 							<div class="col-lg-6 hero-image-wrapper mb-4 mb-lg-0">
-								<img src="images/products/3adurian-musang-king-durian-tiramisu.jpeg" alt="Musang King Tiramisu" class="hero-image">
+								<img src="images/logo/3adurian-logo.png" alt="Musang King Tiramisu" class="hero-image">
 							</div>
 							<div class="col-lg-6 hero-copy-wrapper">
-								<h1 class="mb-2 hero-line hero-line-1" data-translate="hero.tagline">3A DURIAN</h1>
-								<h1 class="mb-2 hero-line hero-line-2" data-translate="hero.title1">MALAYSIA</h1>
-								<h2 class="mb-3 hero-line hero-line-3" data-translate="hero.title2">Fruits Tapas</h2>
-								<p class="mb-1 hero-line hero-line-4" style="font-size: 1.4rem; font-weight: 600;" data-translate="hero.subtitle1">The Taste of Tropical</p>
-								<p class="mb-0 hero-line hero-line-5" style="font-size: 1.2rem; font-weight: 500;" data-translate="hero.subtitle2">The Malaysia Premium Fusion Desserts.</p>
+								<p class="mb-1 hero-line hero-line-3-5" data-translate="hero.title2">Fruits Tapas</p>
+								<p class="mb-1 hero-line hero-line-3-5" data-translate="hero.subtitle1">The Taste of Tropical</p>
+								<p class="mb-0 hero-line hero-line-3-5" data-translate="hero.subtitle2">The Malaysia Premium Fruits Desserts.</p>
 							</div>
 						</div>
+					</div>
 					</div>
 				</div>
 
@@ -540,8 +545,8 @@
 							<div class="col-lg-6 mb-5 mb-lg-0 stagger-item">
 							<div class="heading-block border-bottom-0">
 								<h2 class="nott font-weight-semibold mb-4" style="color: #F4D03F;" data-translate="story.title">Our Story</h2>
-								<p class="lead mb-4" data-translate="story.intro">3Adurian is not just a dessert company; we are passionate artisans dedicated to transforming Malaysia's exotic tropical fruits into extraordinary fusion desserts that bridge traditional Southeast Asian flavors with modern culinary innovation.</p>
-								<p data-translate="story.description">Specializing in durian, pandan coconut, and cempedak creations, we craft each dessert with meticulous care, introducing the rich heritage and unmatched flavors of Malaysian tropical fruits to discerning palates worldwide.</p>
+								<p class="mb-4" style="font-size: 1.1rem;" data-translate="story.intro">3Adurian is not just a dessert company; we are passionate artisans dedicated to transforming Malaysia's exotic tropical fruits into extraordinary fusion desserts that bridge traditional Southeast Asian flavors with modern culinary innovation.</p>
+								<p style="font-size: 1.1rem;" data-translate="story.description">Specializing in durian, pandan coconut, and cempedak creations, we craft each dessert with meticulous care, introducing the rich heritage and unmatched flavors of Malaysian tropical fruits to discerning palates worldwide.</p>
 							</div>
 							</div>
 							<div class="col-lg-6 stagger-item d-flex justify-content-center">
@@ -645,7 +650,7 @@
 
 	<!-- Floating Contact Bubbles -->
 	<div class="floating-contacts">
-		<a href="https://wa.me/60197344930" target="_blank" class="contact-bubble whatsapp-bubble">
+		<a href="https://wa.me/60136666272" target="_blank" class="contact-bubble whatsapp-bubble">
 			<i class="fab fa-whatsapp"></i>
 			<div class="tooltip" data-translate="contact.whatsapp">Chat on WhatsApp</div>
 		</a>

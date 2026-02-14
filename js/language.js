@@ -177,11 +177,11 @@ const translations = {
 		'hero.cta': '联系我们',
 		'story.title': '我们的故事',
 		'story.intro': '3Adurian不仅仅是一家甜品公司；我们是充满热情的手工艺人，致力于将马来西亚的异国热带水果转化为非凡的融合甜品，架起传统东南亚风味与现代烹饪创新之间的桥梁。',
-		'story.description': '专注于榴莲、班兰椰子和杰卡果创作，我们精心制作每一款甜品，向世界各地挑剔的味蕾介绍马来西亚热带水果的丰富传承和无与伦比的风味。',
+		'story.description': '专注于榴莲、班兰椰子和尖不辣创作，我们精心制作每一款甜品，向世界各地挑剔的味蕾介绍马来西亚热带水果的丰富传承和无与伦比的风味。',
 		'process.title': '迈向美味之旅',
 		'process.description': '我们的最终目标是将3Adurian建立为全球认可的马来西亚品牌，在世界各地展示马来西亚热带水果甜品的丰富传统和无与伦比的品质。',
 		'process.step1.title': '优质采购',
-		'process.step1.description': '我们精心挑选来自可信赖的马来西亚种植者的最优质热带水果，确保只有最高品质的榴莲、班兰和杰卡果进入我们的厨房。',
+		'process.step1.description': '我们精心挑选来自可信赖的马来西亚种植者的最优质热带水果，确保只有最高品质的榴莲、班兰和尖不辣进入我们的厨房。',
 		'process.step2.title': '工匠制作',
 		'process.step2.description': '我们的熟练工匠将传统技术与现代创新相结合，创造出既保持正宗风味又迎合现代口味的融合甜品。',
 		'process.step3.title': '完美交付',
@@ -196,7 +196,7 @@ const translations = {
 		// Products page
 		'products.title': '产品',
 		'products.video.description': '体验最优质的热带水果融合甜品，采用优质食材和传统马来西亚风味制作。',
-		'products.video.description2': '从浓郁的猫山王创作到清香的班兰椰子以及芬芳的杰卡果，每一款甜品都经过精心制作，突出马来西亚热带水果的自然风味。',
+		'products.video.description2': '从浓郁的猫山王创作到清香的班兰椰子以及芬芳的尖不辣，每一款甜品都经过精心制作，突出马来西亚热带水果的自然风味。',
 		'products.features.title1': '无防腐剂',
 		'products.features.title2': '无人工色素',
 		'products.features.title3': '无乳糖',
@@ -210,9 +210,9 @@ const translations = {
 		'products.pandan.title': '二. 班兰椰子甜品',
 		'products.pandan.item1': '班兰椰子奶油芝士',
 		'products.pandan.item2': '班兰椰子提拉米苏',
-		'products.cempedak.title': '三. 杰卡果甜品',
-		'products.cempedak.item1': '杰卡果奶油芝士',
-		'products.cempedak.item2': '杰卡果提拉米苏',
+		'products.cempedak.title': '三. 尖不辣甜品',
+		'products.cempedak.item1': '尖不辣奶油芝士',
+		'products.cempedak.item2': '尖不辣提拉米苏',
 		// About page
 		'about.title': '关于我们',
 		'about.intro': '关于热带水果的故事通常围绕爱情、家庭和传统的主题。尝试新奇异国水果甜品的过程往往被描述为一种令人兴奋、愉快、感官丰富的体验，将人们与土地联系起来。',
@@ -223,8 +223,8 @@ const translations = {
 		'about.durian.description': '榴莲甜品是将世界上最具争议的水果——水果之王——转化为奶油般奢华美味的故事，架起传统东南亚文化与现代全球口味之间的桥梁。',
 		'about.pandan.title': '班兰和椰子',
 		'about.pandan.description': '班兰和椰子注入天然的甜香、天然绿色，被称为"亚洲香草"。是东南亚烹饪传统的基石。',
-		'about.cempedak.title': '杰卡果',
-		'about.cempedak.description': '杰卡果是一种深受喜爱的、有着浓郁气味和极其甜美、奶油质地的热带水果，原产于东南亚，特别是马来西亚。其蛋挞般的橙黄色果肉在甜品中备受追捧。',
+		'about.cempedak.title': '尖不辣',
+		'about.cempedak.description': '尖不辣是一种深受喜爱的、有着浓郁气味和极其甜美、奶油质地的热带水果，原产于东南亚，特别是马来西亚。其蛋挞般的橙黄色果肉在甜品中备受追捧。',
 		// Contact page
 		'contact.title': '联系我们',
 		'contact.info': '联系信息',
@@ -242,7 +242,7 @@ const translations = {
 		'about.gallery.item1': '榴莲奶油芝士',
 		'about.gallery.item2': '榴莲提拉米苏',
 		'about.gallery.item3': '班兰椰子奶油芝士',
-		'about.gallery.item4': '杰卡果奶油芝士'
+		'about.gallery.item4': '尖不辣奶油芝士'
 	}
 };
 
